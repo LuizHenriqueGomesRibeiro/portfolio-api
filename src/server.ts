@@ -1,12 +1,13 @@
 import express, { Request, Response } from 'express';
+import { TablesController } from './controller/projectController/tablesController';
 
 const app = express();
 app.use(express.json());
 const port: Number = 3001;
 
-app.get('/', (req: Request, res: Response) => {
-    res.send('Hello, World!');
-});
+const tablesController: TablesController = new TablesController();
+
+app.get('/', tablesController.createProjectTable);
 
 app.listen(port, () => {
     console.log(`App running on port:${port}`);
