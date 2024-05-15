@@ -1,5 +1,5 @@
 import express, { Request, Response } from 'express';
-import { TablesController } from './controller/projectController/tablesController';
+import { TablesController } from './controller/projectController/TablesController';
 
 const app = express();
 app.use(express.json());

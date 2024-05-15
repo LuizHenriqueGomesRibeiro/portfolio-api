@@ -11,15 +11,14 @@ export class TablesController {
             local VARCHAR(100),
             area NUMERIC,
             photos VARCHAR(100),
-            image1 TEXT NOT NULL,
-            image2 TEXT,
-            image3 TEXT,
-            image4 TEXT,
-            image5 TEXT,
-            image6 TEXT,
-            image7 TEXT,
-            image8 TEXT,
-            image9 TEXT,
+            image2 BYTEA NOT NULL,
+            image3 BYTEA,
+            image4 BYTEA,
+            image5 BYTEA,
+            image6 BYTEA,
+            image7 BYTEA,
+            image8 BYTEA,
+            image9 BYTEA
         )`;
         await pool.query(sql);
         return res.status(200).json({'message': 'table created'});
