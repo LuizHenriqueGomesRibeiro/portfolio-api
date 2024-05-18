@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { pool } from "../../db";
+import { pool } from "../db";
 
 export class TablesController {
     async createProjectTable(req: Request, res: Response): Promise<Response> {
@@ -20,6 +20,7 @@ export class TablesController {
             image8 BYTEA,
             image9 BYTEA
         )`;
+        
         await pool.query(sql);
         return res.status(200).json({'message': 'table created'});
     }
